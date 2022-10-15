@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew-Border</title>
+</head>
+<style>
+    body 
+    {
+        margin: 0;
+        padding: 0;
+        background-color: #060c21;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: sans-serif;
+    }
+    .container
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+        grid-gap: 0px 40px ;
+        position: relative;
+        width: 90%;
+    }
+    .container .box
+     {
+        position: relative;
+        height: 400px;
+        background: #060c21;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+     }
+     .container .box::before
+     {
+        content: '';
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        position: absolute;
+        z-index: -1;
+        background: #fff;
+        transform: skew(2deg,2deg);
+     }
+     .container .box:nth-child(1):before
+     {
+        background: linear-gradient(to bottom ,red,blue);
+     }
+     .container .box:nth-child(2):before
+     {
+        background: linear-gradient(to bottom ,yellow, limegreen);
+     }
+     .container .box:nth-child(3):before
+     {
+        background: linear-gradient(to bottom ,blue,rgb(255, 255, 255));
+     }
+     .container .box:nth-child(4):before
+     {
+        background: linear-gradient(to left ,rgb(0, 225, 255), limegreen);
+     }
+     .container .box::after
+     {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(225, 225, 225, 0.05);
+        pointer-events: none;
+     }
+     .content 
+     {
+        transform: translateY(40px);
+        position: relative;
+        padding: 20px;
+     }
+     .content h2 
+    {
+        color: rgba(225, 225, 225, .05);
+        font-size: 10em;
+        position: absolute;
+        top: -60px;
+        transition: .5s;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    .box:hover .content h2 
+    {
+        top: -140px;
+    }
+    .content h3 
+    {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        margin: 0 0 10px;
+        padding: 0;
+    }
+    .content p 
+    {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    .content a 
+    {
+        text-decoration: none;
+        border: 1px solid black;
+        margin: 20px 0 0;
+        position: relative;
+        padding: 10px 20px;
+        display: inline-block;
+        color: #fff;
+        transition: .5s;
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .box:hover .content a
+    {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .content a:hover 
+    {
+        background-color: #ffff;
+        color: #000;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Service One</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi delectus, officia illo possimus saepe eaque similique non. Alias, accusamus id.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Service Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi delectus, officia illo possimus saepe eaque similique non. Alias, accusamus id.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Service Three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi delectus, officia illo possimus saepe eaque similique non. Alias, accusamus id.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>04</h2>
+                <h3>Service Four</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi delectus, officia illo possimus saepe eaque similique non. Alias, accusamus id.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

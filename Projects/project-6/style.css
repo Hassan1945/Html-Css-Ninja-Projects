@@ -1,0 +1,177 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+}
+
+header {
+    display: flex;
+    top: 0;
+    left: 0;
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2em;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+header .toggle {
+    max-width: 60px;
+    cursor: pointer;
+}
+
+header .toggle img {
+    max-width: 100%;
+}
+.banner 
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: rgba( 0, 0, 0, 0.5);
+}
+.banner .textBx
+{
+    position: relative;
+    max-width: 550px;
+    z-index: 2;
+}
+.banner .textBx h2 
+{
+    font-size: 3em;
+    color: #fff;
+}
+.banner .textBx p 
+{
+    font-size: 1.1em ;
+    color: #fff;
+    margin: 5px 0 25px;
+}
+.banner .textBx a 
+{
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    color: #111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: .5s;
+}
+.banner .textBx a:hover 
+{
+    box-shadow: 0px 0px 55px white;
+}
+.banner video 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: .1;
+    pointer-events: none;
+}
+.banner .videoBx
+{
+    position: relative;
+    background: #fff;
+    margin-left: 40px;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+.banner .videoBx video
+{
+    opacity: 1;
+}
+.banner .sci 
+{
+    position: absolute;
+    display: flex;
+    transform: translate(-600px,400px)
+}
+.banner .sci li 
+{
+    list-style: none;
+}
+.banner .sci li a
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+.banner .sci li a img 
+{
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    transform: scale(.5);
+}
+@media(max-width:991px)
+{
+    header 
+    {
+        padding: 20px 50px;
+    }
+    .banner 
+    {
+        padding: 150px 50px 0;
+        flex-direction: column;
+    }
+    .banner::before
+    {
+        display: none;
+    }
+    .banner .textBx
+    {
+        max-width: 100%;
+    }    
+    .banner .textBx h2 
+    {
+        font-size: 2.5em;
+    }
+    .banner .videoBx
+    {
+        width: 100%;
+        height: 200px;
+        margin: 40px 0 100px;
+    }
+    .banner .sci
+    {
+        left: 0px;
+        transform: translate(0px,400px);
+    }
+}

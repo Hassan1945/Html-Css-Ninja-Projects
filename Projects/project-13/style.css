@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+     background: #000;
+}
+section 
+{
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+}
+section h2 
+{
+    color: #666;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+section p 
+{
+    color: #666;
+    font-size: 1.2em;
+}
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-track
+{
+    background: yellow;
+}
+::-webkit-scrollbar-thumb
+{
+    height: 100px;
+    background: linear-gradient(to bottom,rgb(0, 255, 13), rgb(255, 0, 0), rgb(0, 255, 13), rgb(255, 0, 0),rgb(0, 255, 13));
+    border-radius: 6px;
+    transition: background 5s;
+}
+::-webkit-scrollbar-thumb:hover 
+{
+    background: linear-gradient(to bottom,rgb(0, 204, 255), rgb(255, 0, 0), rgb(0, 204, 255), rgb(255, 0, 0),rgb(0, 204, 255));
+}

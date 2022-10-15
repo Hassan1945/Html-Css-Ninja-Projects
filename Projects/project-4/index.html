@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Touch Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/img1.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-2.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-3.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-4.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-5.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-6.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-7.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-8.jpg);"></div>
+            <div class="swiper-slide" style="background-image: url(img/nature-5.jpg);"></div>
+        </div>
+        <!-- Paginations -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect: 'coverflow',
+            grabCursor: true,
+            slidesPerView: 'auto',
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+    </script>
+</body>
+</html>

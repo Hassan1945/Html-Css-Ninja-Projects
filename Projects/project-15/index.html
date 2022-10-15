@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="logo">Pick Creative</div>
+        <img src="bg.jpg" class="bg" alt="">
+        <div class="content">
+            <h2>Let's Pick <br>Something Creative</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores itaque modi quisquam aliquid rem,
+                distinctio nihil saepe voluptatum quia dolor minus perspiciatis culpa at ea dicta cumque reprehenderit
+                facilis est maxime atque, sint quos delectus laborum molestias? Aspernatur consequuntur tempora
+                voluptate harum obcaecati reprehenderit impedit.</p>
+            <a href="#">Get Started</a>
+        </div>
+        <p class="copyrightText">© 2022. Pick Creative</p>
+    </section>
+    <div class="menuToggle" onclick="toggleMenu()"></div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="socialBar">
+            <ul>
+                <li><a href="#"><img src="../../All-PNG-icons-and-svg/facebook.svg"></a></li>
+                <li><a href="#"><img src="../../All-PNG-icons-and-svg/youtube.svg"></a></li>
+                <li><a href="#"><img src="../../All-PNG-icons-and-svg/twitter.svg"></a></li>
+            </ul>
+            <a href="mailto:you@eamil.com" class="emailBx">
+                <img src="../../All-PNG-icons-and-svg/message-solid.svg"></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.menuToggle');
+            var nav = document.querySelector('.navigation');
+            menuToggle.classList.toggle("active")
+            nav.classList.toggle("active")
+        }
+    </script>
+</body>
+
+</html>
